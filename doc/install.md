@@ -8,17 +8,17 @@
 
     * RabbitMQ依赖的Erlang版本：
 
-    [RabbitMQ Erlang Version Requirements](https://www.rabbitmq.com/which-erlang.html)
+        [RabbitMQ Erlang Version Requirements](https://www.rabbitmq.com/which-erlang.html)
 
     * Erlang安装
 
         * RabbitMQ团队提供的安装包 (推荐)
 
-        [rabbitmq/erlang-rpm](https://github.com/rabbitmq/erlang-rpm)
+            [rabbitmq/erlang-rpm](https://github.com/rabbitmq/erlang-rpm)
 
         * Erlang官网下载
 
-        [Erlang Solutions](https://www.erlang-solutions.com/resources/download.html)
+            [Erlang Solutions](https://www.erlang-solutions.com/resources/download.html)
 
 * 安装RabbitMQ Server
 
