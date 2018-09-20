@@ -30,14 +30,10 @@
 
     * 添加RabbitMQ Server源
 
-        创建yum源文件
-        ```
-        /etc/yum.repos.d/rabbitmq-erlang.repo
-        ```
-
-        centos 7:
+        * centos 7:
 
         ```
+        # In /etc/yum.repos.d/rabbitmq-server.repo
         [bintray-rabbitmq-server]
         name=bintray-rabbitmq-rpm
         baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/7/
@@ -46,9 +42,10 @@
         enabled=1
         ```
 
-        centos 6:
+        * centos 6:
 
         ```
+        # In /etc/yum.repos.d/rabbitmq-server.repo
         [bintray-rabbitmq-server]
         name=bintray-rabbitmq-rpm
         baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/6/
