@@ -1,3 +1,3 @@
 # RabbitMQ-PHP
 
-* [RabbitMQ Server安装](./doc/install.md)
+* [Centos安装RabbitMQ（Yum）](./doc/install.md)
