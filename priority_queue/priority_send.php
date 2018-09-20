@@ -27,3 +27,4 @@ echo ' [x] Sent ', $data, "\n";
 
 $channel->close();
 $connection->close();
+
