@@ -32,27 +32,27 @@
 
         * centos 7:
 
-        ```
-        # In /etc/yum.repos.d/rabbitmq-server.repo
-        [bintray-rabbitmq-server]
-        name=bintray-rabbitmq-rpm
-        baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/7/
-        gpgcheck=0
-        repo_gpgcheck=0
-        enabled=1
-        ```
+            ```
+            # In /etc/yum.repos.d/rabbitmq-server.repo
+            [bintray-rabbitmq-server]
+            name=bintray-rabbitmq-rpm
+            baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/7/
+            gpgcheck=0
+            repo_gpgcheck=0
+            enabled=1
+            ```
 
         * centos 6:
 
-        ```
-        # In /etc/yum.repos.d/rabbitmq-server.repo
-        [bintray-rabbitmq-server]
-        name=bintray-rabbitmq-rpm
-        baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/6/
-        gpgcheck=0
-        repo_gpgcheck=0
-        enabled=1
-        ```
+            ```
+            # In /etc/yum.repos.d/rabbitmq-server.repo
+            [bintray-rabbitmq-server]
+            name=bintray-rabbitmq-rpm
+            baseurl=https://dl.bintray.com/rabbitmq/rpm/rabbitmq-server/v3.7.x/el/6/
+            gpgcheck=0
+            repo_gpgcheck=0
+            enabled=1
+            ```
 
     * 安装RabbitMQ Server
 
