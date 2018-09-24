@@ -37,7 +37,7 @@
         $connection->close();
         ```
 
-    * [完整代码](./send.php)
+    * [send.php 完整代码](./send.php)
 
 * 从接收消息
 
@@ -69,7 +69,7 @@
         $channel->basic_consume('hello', '', false, true, false, false, $callback);
         ```
 
-    * [完整代码](./receive.php)
+    * [receive.php 完整代码](./receive.php)
 
 
 * 总结
