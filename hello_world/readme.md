@@ -1,4 +1,4 @@
-# 基本的消息发布和消费操作
+# 基本的消息发布和消费操作（[Hello World](http://www.rabbitmq.com/tutorials/tutorial-one-php.html)）
 
 * 向队列发送消息
 
