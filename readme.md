@@ -7,3 +7,5 @@
 * [基本的消息发布和消费操作（Hello World）](./hello_world/readme.md)
 
 * [工作队列（Work Queues）](./work_queues/readme.md)
+
+* [发布和订阅（Publish/Subscribe）](./publish_subscribe/readme.md)
