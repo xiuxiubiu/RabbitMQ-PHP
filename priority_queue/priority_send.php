@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 
-require_once dirname(dirname(__FILE__)).'/vendor/autoload.php';
+require_once dirname(__DIR__).'/vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
