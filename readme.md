@@ -11,3 +11,5 @@
 * [发布和订阅（Publish/Subscribe）](./publish_subscribe/readme.md)
 
 * [路由（Routing）](./routing/readme.md)
+
+* [Topic Exchange](./topics/readme.md)
