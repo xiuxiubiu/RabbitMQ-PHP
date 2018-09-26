@@ -9,3 +9,5 @@
 * [工作队列（Work Queues）](./work_queues/readme.md)
 
 * [发布和订阅（Publish/Subscribe）](./publish_subscribe/readme.md)
+
+* [路由（Routing）](./routing/readme.md)
