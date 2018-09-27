@@ -131,7 +131,9 @@
 
     假如在轮询调度（Round-robin dispatching）机制下，有两个消费者，基数任务特别耗时，偶数任务很轻松，RabbitMQ不在乎消费者任务是否积压，还是会固定将奇数任务分配给一个消费者，偶数任务分配给另一个消费者。
 
-    为了解决这个问题，可以在消费者代码中使用basic_qos方法，设置第二个参数prefetch_count的值为1，告诉RabbitMQ不要同一时间分配超过一个消息给消费者，这样只有在消费者空闲时才会分配下一条消息给消费者。（[还记得轮询调度的介绍吗？](#round-robin-default)）
+    为了解决这个问题，可以在消费者代码中使用basic_qos方法，设置第二个参数prefetch_count的值为1，此参数的意思是，如果有prefetch_count个消息没有ack，则不会收到新的消息。设置为1告诉RabbitMQ不要同一时间分配超过一个消息给消费者，这样只有在消费者空闲时才会分配下一条消息给消费者。（[还记得轮询调度的介绍吗？](#round-robin-default)）
+
+    basic_qos只有在需要消息确认，即设置basic_consume的第4个参数no_ack为false时生效。
 
     ```
     $channel->basic_qos(null, 1, null);
