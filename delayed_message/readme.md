@@ -22,7 +22,7 @@ rabbitmq-plugins list | grep rabbitmq_delayed_message_exchange
 [E*] rabbitmq_delayed_message_exchange 20171201-3.7.x
 ```
 
-# 插件安装
+### 插件安装
 
 首先，[Community Plugins](http://www.rabbitmq.com/community-plugins.html)找到rabbitmq_delayed_message_exchange下载插件。解压后将插件放到RabbitMQ安装目录下的plugins文件夹下。
 
