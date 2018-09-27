@@ -9,14 +9,14 @@ $connection = new AMQPStreamConnection('127.0.0.1', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
 // 设置队列最大优先级
-$args = new AMQPTable(['x-max-priority'=>255]);
+$args = new AMQPTable(['x-max-priority'=>10]);
 $channel->queue_declare('priority_queue', false, false, false, false, false, $args);
 
 echo " [*] Waiting for data. To exit press CTRL+C\n";
 
 $callback = function ($message) {
     echo ' [x] Received ', $message->body, "\n";
-    sleep(10);
+    sleep(5);
     $message->delivery_info['channel']->basic_ack($message->delivery_info['delivery_tag']);
     echo " [x] Done\n";
 };

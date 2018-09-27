@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL);
-
 require_once dirname(__DIR__).'/vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
@@ -11,7 +9,7 @@ use PhpAmqpLib\Wire\AMQPTable;
 $connection = new AMQPStreamConnection('127.0.0.1', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
-$args = new AMQPTable(['x-max-priority'=>255]);
+$args = new AMQPTable(['x-max-priority'=>10]);
 $channel->queue_declare('priority_queue', false, false, false, false, false, $args);
 
 $data = implode(' ', array_slice($argv, 1));
