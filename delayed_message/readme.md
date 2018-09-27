@@ -1,6 +1,6 @@
 # 延迟队列
 
-RabbitMQ 3.5.8以后提供了rabbitmq_delayed_message_exchange插件来实现延迟队列。
+RabbitMQ 3.5.8以后提供了[rabbitmq_delayed_message_exchange](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange)插件来实现延迟队列。
 
 ### 插件列表命令
 
