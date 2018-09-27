@@ -83,6 +83,7 @@ $channel->basic_publish($message1000, 'my-delayed', '', false, false);
 设置AMQMessage的properties属性中的application_headers信息里的x-delay参数指定延迟时间。如果此参数没有设置，则消息不延迟。
 
 <div id="routing"></div>
+
 ### Routing
 
 插件可以通过x-delayed-type参数提供灵活的路由行为。比如：设置x-delayed-type为direct，表示插件使用和direct exchange一样的路由行为，当然也可以设置为topic等等exchange类型，或者是别的插件提供的exchange。
