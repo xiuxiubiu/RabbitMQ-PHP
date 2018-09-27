@@ -12,20 +12,14 @@ $channel = $connection->channel();
 $args = new AMQPTable(['x-delayed-type' => 'direct']);
 $channel->exchange_declare('my-delayed', 'x-delayed-message', false, true, false, false, false, $args);
 
-$data = implode(' ', array_slice($argv, 1));
-if (empty($data)) {
-    $data = 'Hello World!';
-}
 
-$properties = [
-    'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT,
-    'application_headers' => new AMQPTable(['x-delay'=>5000]),
-];
-$message = new AMQPMessage($data, $properties);
+$message5000 = new AMQPMessage('延迟5000毫秒', ['application_headers' => new AMQPTable(['x-delay'=>5000])]);
+$channel->basic_publish($message5000, 'my-delayed', '', false, false);
 
-$channel->basic_publish($message, 'my-delayed', '', false, false);
+$message1000 = new AMQPMessage('延迟1000毫秒', ['application_headers' => new AMQPTable(['x-delay'=>1000])]);
+$channel->basic_publish($message1000, 'my-delayed', '', false, false);
 
-echo ' [x] Sent ', $data, "\n";
+echo ' [x] Sent Success!', "\n";
 
 $channel->close();
 $connection->close();
